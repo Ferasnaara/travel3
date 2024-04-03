@@ -25,7 +25,9 @@ import com.google.firebase.firestore.DocumentReference;
     public class AddTravilingFragment extends Fragment {
 
     private FirebaseServices fbs;
-    private EditText etName, etDescription, etAddress, etPhone;
+    private EditText etName,
+            etDescription,
+            etAddress, etPhone;
     private Button btnAdd;
 
 
@@ -68,14 +70,13 @@ import com.google.firebase.firestore.DocumentReference;
         connectComponents();
 
     }
-
-    @SuppressLint("WrongViewCast")
     private void connectComponents() {
+
         fbs = FirebaseServices.getInstance();
-        etName = getView().findViewById(R.id.btnSignupLogin);
-        etDescription = getView().findViewById(R.id.btnBackSignup);
-        etAddress = getView().findViewById(R.id.btnBackSignup);
-        etPhone = getView().findViewById(R.id.btnSignupLogin);
+        etName = getView().findViewById(R.id.etTitleAddProductFragment);
+        etDescription = getView().findViewById(R.id.etDescAddProductFragment);
+        etAddress = getView().findViewById(R.id.etPriceAddProductFragment);
+        etPhone = getView().findViewById(R.id.editTextPhone);
         btnAdd = getView().findViewById(R.id.btnSignupLogin);
 
         btnAdd.setOnClickListener(new View.OnClickListener() {

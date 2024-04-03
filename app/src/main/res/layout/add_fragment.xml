@@ -20,7 +20,7 @@
             android:layout_marginTop="40dp"
             android:layout_marginBottom="230dp"
             android:ems="10"
-            android:hint="title..."
+            android:hint="Name..."
             android:inputType="text"
             app:layout_constraintBottom_toTopOf="@+id/ivShowAddProduct"
             app:layout_constraintEnd_toEndOf="parent"
@@ -49,7 +49,18 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="45dp"
             android:ems="10"
-            android:hint="price..."
+            android:hint="address..."
+            android:inputType="number|numberDecimal"
+            app:layout_constraintStart_toStartOf="@+id/etDescAddProductFragment"
+            app:layout_constraintTop_toBottomOf="@+id/etDescAddProductFragment" />
+
+        <EditText
+            android:id="@+id/etPriceAddProductFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:ems="10"
+            android:hint="address..."
             android:inputType="number|numberDecimal"
             app:layout_constraintStart_toStartOf="@+id/etDescAddProductFragment"
             app:layout_constraintTop_toBottomOf="@+id/etDescAddProductFragment" />
@@ -76,6 +87,16 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etTitleAddProductFragment" />
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Phone..."
+            android:inputType="phone"
+            tools:layout_editor_absoluteX="95dp"
+            tools:layout_editor_absoluteY="325dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
