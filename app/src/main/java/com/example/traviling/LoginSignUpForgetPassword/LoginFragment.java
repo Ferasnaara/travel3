@@ -114,7 +114,7 @@ public class LoginFragment extends Fragment {
                 fbs.getAuth().signInWithEmailAndPassword(username, password).addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-
+                        // TODO: where should I go
                         if (task.isSuccessful()) {
                         } else {
                             Toast.makeText(getActivity(), "failed to login! check user or password", Toast.LENGTH_SHORT).show();

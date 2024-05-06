@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.traviling.FirebaseServices;
 import com.example.traviling.MyAdapter;
 import com.example.traviling.R;
-import com.example.traviling.Traviling;
+import com.example.traviling.Traveling;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -28,7 +28,7 @@ import java.util.ArrayList;
 public class ShowTravilingFragment extends Fragment {
 
     private FirebaseServices fbs;
-    private ArrayList<Traviling> t;
+    private ArrayList<Traveling> t;
     private RecyclerView tr;
     private MyAdapter adapter;
     private static final String ARG_PARAM1 = "param1";
@@ -80,7 +80,7 @@ public class ShowTravilingFragment extends Fragment {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 for (DocumentSnapshot dataSnapshot: queryDocumentSnapshots.getDocuments()){
-                    Traviling travil = dataSnapshot.toObject(Traviling.class);
+                    Traveling travil = dataSnapshot.toObject(Traveling.class);
 
                     travil.setDescription(travil);
                 }

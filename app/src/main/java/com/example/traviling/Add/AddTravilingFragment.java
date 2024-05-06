@@ -1,34 +1,36 @@
 package com.example.traviling.Add;
 
-import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.traviling.FirebaseServices;
 import com.example.traviling.R;
-import com.example.traviling.Traviling;
+import com.example.traviling.Traveling;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 
 
     public class AddTravilingFragment extends Fragment {
-
-    private FirebaseServices fbs;
-    private EditText etName,
-            etDescription,
-            etAddress, etPhone;
-    private Button btnAdd;
+        private static final int GALLERY_REQUEST_CODE = 123;
+        private FirebaseServices fbs;
+        private EditText etName, etDescription, etAddress, etPhone;
+        private Button btnAdd;
 
 
     private static final String ARG_P1 = "p1";
@@ -36,9 +38,10 @@ import com.google.firebase.firestore.DocumentReference;
 
     private String mParam1;
     private String mParam2;
+        private ImageView img;
+        private Utils utils;
 
-    public AddTravilingFragment() {
-    }
+        public AddTravilingFragment() {}
     public static AddTravilingFragment newInstance(String param1, String param2) {
         AddTravilingFragment fragment = new AddTravilingFragment();
         Bundle args = new Bundle();
@@ -78,7 +81,13 @@ import com.google.firebase.firestore.DocumentReference;
         etAddress = getView().findViewById(R.id.etPriceAddProductFragment);
         etPhone = getView().findViewById(R.id.editTextPhone);
         btnAdd = getView().findViewById(R.id.btnSignupLogin);
-
+        img=getView().findViewById(R.id.ivShowAddProduct);
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openGallery();
+            }
+        });
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,29 +96,56 @@ import com.google.firebase.firestore.DocumentReference;
                 String description = etDescription.getText().toString();
                 String address = etAddress.getText().toString();
                 String phone = etPhone.getText().toString();
+                fbs = FirebaseServices.getInstance();
 
                 if (name.trim().isEmpty() || description.trim().isEmpty() ||
                         address.trim().isEmpty() || phone.trim().isEmpty()) {
                     Toast.makeText(getActivity(), "Some fields are empty!", Toast.LENGTH_LONG).show();
                     return;
                 }
+                Traveling traveling;
+                if (fbs.getSelectedImageURL() == null)
+                {
+                    traveling = new Traveling(name, description, address, phone, "");
 
-                Traviling traviling= new Traviling(name, description, address, phone);
-
-                fbs.getFire().collection("restaurants").add(fbs).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                }
+                else {
+                    traveling = new Traveling(name, description, address, phone, fbs.getSelectedImageURL().toString());
+                }
+                Task<DocumentReference> travels = fbs.getFire().collection("travels").add(traveling).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
-                        Toast.makeText(getActivity(), "Successfully added your restaurant!", Toast.LENGTH_SHORT).show();
+                        // TODO: goto show
+                        Toast.makeText(getActivity(), "Successfully added your travel!", Toast.LENGTH_SHORT).show();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Log.e("Failure AddRestaurant: ", e.getMessage());
+                        // TODO: Restaurant
+                        Log.e("Failure AddTravel: ", e.getMessage());
                     }
-                });
 
+
+                    // TODO: add imageview onclicklistener: open gallery
+
+
+                });
 
             }
         });
     }
+
+    private void openGallery() {
+        Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(galleryIntent, GALLERY_REQUEST_CODE);
+    }
+        public void onActivityResult(int requestCode, int resultCode, Intent data) {
+            super.onActivityResult(requestCode, resultCode, data);
+
+            if (requestCode == GALLERY_REQUEST_CODE && resultCode == getActivity().RESULT_OK && data != null) {
+                Uri selectedImageUri = data.getData();
+                img.setImageURI(selectedImageUri);
+                utils.uploadImage(getActivity(), selectedImageUri);
+            }
+        }
 }

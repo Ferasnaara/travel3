@@ -1,19 +1,19 @@
 package com.example.traviling;
 
-public class Traviling {
+public class Traveling {
     private String Name;
     private String description;
     private String address;
     private String phone;
+    private String photo;
 
-    public Traviling() {
-    }
 
-    public Traviling(String Name, String description, String address, String phone) {
+    public Traveling(String Name, String description, String address, String phone,String photo) {
         this.Name = Name;
         this.description = description;
         this.address = address;
         this.phone = phone;
+        this.photo=photo;
     }
 
     public String getName() {
@@ -28,7 +28,7 @@ public class Traviling {
         return description;
     }
 
-    public void setDescription(Traviling description) {
+    public void setDescription(Traveling description) {
         this.description = String.valueOf(description);
     }
 
@@ -47,6 +47,8 @@ public class Traviling {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+    public String getPhoto(){return photo;}
+    public void setPhoto(){this.photo=photo;}
 
     @Override
     public String toString() {
@@ -55,6 +57,7 @@ public class Traviling {
                 ", description='" + description + '\'' +
                 ", address='" + address + '\'' +
                 ", phone='" + phone + '\'' +
+                ", photo='" + photo + '\'' +
                 '}';
     }
 }
