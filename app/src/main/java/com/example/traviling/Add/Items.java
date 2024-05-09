@@ -1,34 +1,32 @@
 package com.example.traviling.Add;
 
 public class Items {
-    private String title;
+    private String HotelName;
     private String location;
 
     private String description;
     private int bed;
     private boolean guide;
-    private double score;
     private String pic;
     private boolean wifi;
     private int price;
-    public Items (String title,String description,String location,int bed, boolean guide,double score,String pic, boolean wifi, int price)
+    public Items (String HotelName,String description,String location,int bed, boolean guide,double score,String pic, boolean wifi, int price)
     {
-        this.title=title;
+        this.HotelName=HotelName;
         this.location=location;
         this.description=description;
         this.bed=bed;
         this.guide=guide;
-        this.score=score;
         this.pic=pic;
         this.wifi=wifi;
         this.price=price;
 
     }
-    public String getTitle(){
-        return title;
+    public String getHotelName(){
+        return HotelName;
     }
-    public void setTitle(String title){
-        this.title=title;
+    public void setHotelName(String HotelName){
+        this.HotelName=HotelName;
     }
     public String getLocation() {
         return location;

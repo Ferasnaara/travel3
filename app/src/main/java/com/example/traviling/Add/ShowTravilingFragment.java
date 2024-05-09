@@ -13,8 +13,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.traviling.FirebaseServices;
-import com.example.traviling.MyAdapter;
+import com.example.traviling.Adapter.MyAdapter;
+import com.example.traviling.LoginSignUpForgetPassword.FirebaseServices;
 import com.example.traviling.R;
 import com.example.traviling.Traveling;
 import com.google.android.gms.tasks.OnFailureListener;

@@ -1,4 +1,4 @@
-package com.example.traviling;
+package com.example.traviling.Adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.traviling.R;
+import com.example.traviling.Traveling;
 
 import java.util.ArrayList;
 
