@@ -1,0 +1,181 @@
+@startuml
+class MapsActivity {
+- GoogleMap gMap
+}
+
+class TopPlacesAdapter {
+~ Context context
+~ List<TopPlacesData> topPlacesDataList
+}
+
+class TopPlacesAdapter$TopPlacesViewHolder {
+~ ImageView placeImage
+~ TextView placeName
+}
+
+class Traveling {
+- String Name
+- String description
+- String address
+- String phone
+- String photo
+}
+
+class FirebaseServices {
+- {static} FirebaseServices instance
+- FirebaseAuth auth
+- FirebaseFirestore fire
+- FirebaseStorage storage
+- Uri selectedImageURL
+}
+
+class ForgotPasswordFragment {
+- {static} String ARG_PARAM1
+- {static} String ARG_PARAM2
+- String mParam1
+- String mParam2
+- Button btnForgot
+- EditText etEmailforgot
+- FirebaseAuth mAuth
+}
+
+class TopPlacesData {
+~ String placeName
+~ String countryName
+~ String price
+~ int imageUrl
+}
+
+class SignUpFragment {
+- Button btnSignUpSIGNUP
+- EditText etUsernameSIGNUP
+- FirebaseServices fbs
+- {static} String ARG_P1
+- {static} String ARG_P2
+- String mP1
+- String mP2
+}
+
+class SignUpFragment$AllProductsActivity {
+}
+class introFragment {
+}
+class Home {
+~ RecyclerView recentRecycler
+~ RecentsAdapter recentsAdapter
+~ TopPlacesAdapter topPlacesAdapter
+}
+
+class LoginFragment {
+- EditText etUsername
+- TextView tvSignupLink
+- TextView tvForgotPasswardLink
+- Button btnLogin
+- Button asGuest
+- FirebaseServices fbs
+- {static} String ARG_PARAM1
+- {static} String ARG_PARAM2
+- String mParam1
+- String mParam2
+}
+
+class Items {
+- String HotelName
+- String location
+- String description
+- int bed
+- boolean guide
+- String pic
+- boolean wifi
+- int price
+}
+
+class ExampleInstrumentedTest {
+}
+class Utils {
+- {static} Utils instance
+- FirebaseServices fbs
+- String imageStr
+}
+
+class MyAdapter {
+~ ArrayList<Traveling> list
+~ Context context
+}
+
+class MyAdapter$MyViewHolder {
+~ TextView Name
+~ ImageView proPicture
+}
+
+class ExampleUnitTest {
+}
+class RecentsAdapter {
+~ Context context
+~ List<RecentsData> recentsDataList
+}
+
+class RecentsAdapter$RecentsViewHolder {
+~ ImageView placeImage
+~ TextView placeName
+}
+
+class RecentsData {
+~ String placeName
+~ String countryName
+~ String price
+~ Integer imageUrl
+}
+
+class DetailsActivity {
+}
+class AddTravilingFragment {
+- {static} int GALLERY_REQUEST_CODE
+- FirebaseServices fbs
+- EditText etName
+- Button btnAdd
+- {static} String ARG_P1
+- {static} String ARG_P2
+- String mParam1
+- String mParam2
+- ImageView img
+- Utils utils
+}
+
+class ShowTravilingFragment {
+- FirebaseServices fbs
+- ArrayList<Traveling> t
+- RecyclerView tr
+- MyAdapter adapter
+- {static} String ARG_PARAM1
+- {static} String ARG_PARAM2
+- String mParam1
+- String mParam2
+}
+
+class MainActivity {
+}
+
+
+OnMapReadyCallback <|.. MapsActivity
+AppCompatActivity <|-- MapsActivity
+Adapter <|-- TopPlacesAdapter
+TopPlacesAdapter +.. TopPlacesAdapter$TopPlacesViewHolder
+ViewHolder <|-- TopPlacesAdapter$TopPlacesViewHolder
+Fragment <|-- ForgotPasswordFragment
+Fragment <|-- SignUpFragment
+SignUpFragment +.. SignUpFragment$AllProductsActivity
+Fragment <|-- introFragment
+AppCompatActivity <|-- Home
+Fragment <|-- LoginFragment
+Adapter <|-- MyAdapter
+MyAdapter +.. MyAdapter$MyViewHolder
+ViewHolder <|-- MyAdapter$MyViewHolder
+Adapter <|-- RecentsAdapter
+RecentsAdapter +.. RecentsAdapter$RecentsViewHolder
+ViewHolder <|-- RecentsAdapter$RecentsViewHolder
+AppCompatActivity <|-- DetailsActivity
+Fragment <|-- AddTravilingFragment
+Fragment <|-- ShowTravilingFragment
+AppCompatActivity <|-- MainActivity
+@enduml

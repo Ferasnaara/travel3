@@ -19,24 +19,24 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/madrid" />
+        app:srcCompat="@drawable/bigben" />
 
     <TextView
         android:id="@+id/place_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Madrid"
+        android:text="Bigben"
         app:layout_constraintStart_toEndOf="@+id/place_image"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/country_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        android:text="Spain"
+        android:text="London"
         app:layout_constraintStart_toStartOf="@+id/place_name"
         app:layout_constraintTop_toBottomOf="@+id/place_name" />
 
@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        android:text="From $1000-$5000"
+        android:text="From $500"
         app:layout_constraintStart_toStartOf="@+id/country_name"
         app:layout_constraintTop_toBottomOf="@+id/country_name" />
 
@@ -57,5 +57,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/arrow_icon" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
