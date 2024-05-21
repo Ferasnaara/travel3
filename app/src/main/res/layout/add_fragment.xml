@@ -21,7 +21,7 @@
             android:layout_marginTop="40dp"
             android:layout_marginBottom="230dp"
             android:ems="10"
-            android:hint="Name..."
+            android:hint="HotelName..."
             android:inputType="text"
             app:layout_constraintBottom_toTopOf="@+id/ivShowAddProduct"
             app:layout_constraintEnd_toEndOf="parent"

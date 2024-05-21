@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="552dp"
                 android:scaleType="center"
-                tools:srcCompat="@drawable/travel_guard_1_thumb_800_480_png"/>
+                tools:srcCompat="@drawable/travel_guard_1_thumb_800_480_png" />
 
 
             <TextView

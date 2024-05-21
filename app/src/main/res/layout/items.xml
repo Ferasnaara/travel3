@@ -28,12 +28,12 @@
             <ImageView
                 android:id="@+id/ivFavoriteIcon"
                 android:layout_width="44dp"
-                android:layout_height="34dp"
-                android:background="@drawable/_7bb9361_26c0_46c2_ae61_71e5b4bfd11c"
-                android:clickable="true"
+                android:layout_height="30dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginEnd="16dp"
-                tools:ignore="ContentDescription" />
+                android:background="@drawable/_7bb9361_26c0_46c2_ae61_71e5b4bfd11c"
+                android:clickable="true"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
         </LinearLayout>
 
         <ImageView
@@ -56,7 +56,6 @@
                 android:layout_weight="1"
                 android:text="Price"/>
 
-            <!-- Add other car details TextViews -->
 
         </LinearLayout>
 
@@ -67,32 +66,26 @@
             android:layout_marginTop="8dp">
 
             <TextView
-                android:id="@+id/"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Kilometers"/>
-
-            <TextView
-                android:id="@+id/tvGearShift_carListFragment"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Gear Shift"/>
-
-            <TextView
-                android:id="@+id/tvlocation_carListFragment"
+                android:id="@+id/text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Location"/>
 
             <TextView
-                android:id="@+id/tvYear_carListFragment"
+                android:id="@+id/tvGearShift_carListFragment"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Year"/>
+                android:text="description"/>
+
+            <TextView
+                android:id="@+id/tvlocation_carListFragment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="pic"/>
+
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
