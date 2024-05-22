@@ -1,4 +1,5 @@
 package com.example.traviling.LoginSignUpForgetPassword;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.traviling.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -79,11 +81,13 @@ public class SignUpFragment extends Fragment
                         startActivity(i);
                         ((Activity) getActivity()).overridePendingTransition(0, 0);
 
+
                     }
                 });
             }
         });
     }
+
 
     private class AllProductsActivity {
     }

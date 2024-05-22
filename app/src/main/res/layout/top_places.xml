@@ -29,6 +29,7 @@
         android:layout_marginStart="8dp"
         android:text="Madrid"
         app:layout_constraintStart_toEndOf="@+id/place_image"
+        app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteY="16dp" />
 
     <TextView

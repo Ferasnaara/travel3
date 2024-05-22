@@ -1,4 +1,4 @@
-package com.example.traviling;
+package com.example.traviling.LoginSignUpForgetPassword;
 
 import android.os.Bundle;
 
@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.traviling.Adapter.RecentsAdapter;
 import com.example.traviling.Adapter.TopPlacesAdapter;
+import com.example.traviling.R;
 import com.example.traviling.model.RecentsData;
 import com.example.traviling.model.TopPlacesData;
 
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Home extends AppCompatActivity {
+public class HomeFragment extends AppCompatActivity {
 
     RecyclerView recentRecycler, topPlacesRecycler;
     RecentsAdapter recentsAdapter;
@@ -28,21 +29,22 @@ public class Home extends AppCompatActivity {
 
 
         List<RecentsData> recentsDataList = new ArrayList<>();
-        recentsDataList.add(new RecentsData("AM Lake", "India", "From $200", R.drawable.recentimage1));
-        recentsDataList.add(new RecentsData("Nilgiri Hills", "India", "From $300", R.drawable.recentimage2));
-        recentsDataList.add(new RecentsData("AM Lake", "India", "From $200", R.drawable.recentimage1));
-        recentsDataList.add(new RecentsData("Nilgiri Hills", "India", "From $300", R.drawable.recentimage2));
-        recentsDataList.add(new RecentsData("AM Lake", "India", "From $200", R.drawable.recentimage1));
-        recentsDataList.add(new RecentsData("Nilgiri Hills", "India", "From $300", R.drawable.recentimage2));
+        recentsDataList.add(new RecentsData("Nilgiri hills", "India", "From $200", R.drawable.recentimage2));
+        recentsDataList.add(new RecentsData("kashmir hills", "India", "From $300", R.drawable.topplaces));
+        recentsDataList.add(new RecentsData("Nilgiri hills", "India", "From $200", R.drawable.recentimage2));
+        recentsDataList.add(new RecentsData("kashmir hills", "India", "From $300", R.drawable.topplaces));
+        recentsDataList.add(new RecentsData("Nilgiri hills", "India", "From $200", R.drawable.recentimage2));
+        recentsDataList.add(new RecentsData("kashmir hills", "India", "From $300", R.drawable.topplaces));
 
         setRecentRecycler(recentsDataList);
 
         List<TopPlacesData> topPlacesDataList = new ArrayList<>();
-        topPlacesDataList.add(new TopPlacesData("Kasimir Hill", "India", "$200 - $500", R.drawable.topplaces));
-        topPlacesDataList.add(new TopPlacesData("Kasimir Hill", "India", "$200 - $500", R.drawable.topplaces));
-        topPlacesDataList.add(new TopPlacesData("Kasimir Hill", "India", "$200 - $500", R.drawable.topplaces));
-        topPlacesDataList.add(new TopPlacesData("Kasimir Hill", "India", "$200 - $500", R.drawable.topplaces));
-        topPlacesDataList.add(new TopPlacesData("Kasimir Hill", "India", "$200 - $500", R.drawable.topplaces));
+        topPlacesDataList.add(new TopPlacesData("BigBen", "London", " $500", R.drawable.bigben));
+        topPlacesDataList.add(new TopPlacesData("Madrid", "Spain", "$1000 - $5000", R.drawable.topplaces));
+        topPlacesDataList.add(new TopPlacesData("BigBen", "London", "$500", R.drawable.bigben));
+        topPlacesDataList.add(new TopPlacesData("Madrid", "Spain", "$1000 - $5000", R.drawable.topplaces));
+        topPlacesDataList.add(new TopPlacesData("BigBen", "London", "$500", R.drawable.bigben));
+        topPlacesDataList.add(new TopPlacesData("Madrid", "Spain", "$1000 - $5000", R.drawable.topplaces));
 
         setTopPlacesRecycler(topPlacesDataList);
     }
@@ -67,4 +69,5 @@ public class Home extends AppCompatActivity {
 
 
     }
+
 }
