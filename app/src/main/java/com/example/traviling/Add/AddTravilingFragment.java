@@ -4,10 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,8 +14,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.traviling.LoginSignUpForgetPassword.FirebaseServices;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+
 import com.example.traveling.R;
+import com.example.traviling.LoginSignUpForgetPassword.FirebaseServices;
 import com.example.traviling.Traveling;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
