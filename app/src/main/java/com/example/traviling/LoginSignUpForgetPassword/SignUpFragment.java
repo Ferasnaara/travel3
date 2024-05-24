@@ -10,14 +10,11 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
-import com.example.traviling.R;
+import com.example.traveling.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
-
-import org.checkerframework.checker.nullness.qual.NonNull;
 public class SignUpFragment extends Fragment
 {
     private Button btnSignUpSIGNUP;
@@ -54,7 +51,7 @@ public class SignUpFragment extends Fragment
 
 
 
-    @SuppressLint("WrongViewCast")
+    @SuppressLint({"WrongViewCast", "CutPasteId"})
     @Override
     public void onStart() {
         super.onStart();

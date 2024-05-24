@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.traviling.Adapter.MyAdapter;
 import com.example.traviling.LoginSignUpForgetPassword.FirebaseServices;
-import com.example.traviling.R;
+import com.example.traveling.R;
 import com.example.traviling.Traveling;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;

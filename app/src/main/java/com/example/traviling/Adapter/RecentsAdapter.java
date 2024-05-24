@@ -12,7 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.traviling.R;
+import com.example.traveling.R;
 import com.example.traviling.model.RecentsData;
 
 import java.util.List;

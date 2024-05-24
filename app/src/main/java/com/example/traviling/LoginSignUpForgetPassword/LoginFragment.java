@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.traviling.R;
+import com.example.traveling.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -89,7 +89,7 @@ public class LoginFragment extends Fragment {
         tvForgotPasswardLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gotoFrgotPasswordFragment();
+                gotoForgotPasswordFragment();
             }
         });
 
@@ -121,7 +121,6 @@ public class LoginFragment extends Fragment {
                     }
                 });
 
-
             }
         });
 
@@ -135,7 +134,7 @@ public class LoginFragment extends Fragment {
 
     }
 
-    private void gotoFrgotPasswordFragment() {
+    private void gotoForgotPasswordFragment() {
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.frameLayoutMain, new ForgotPasswordFragment());
         ft.commit();

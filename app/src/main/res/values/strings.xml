@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Traviling</string>
+    <string name="forgotpassword">ForgotPassword</string>
+    <string name="let_s_get_started">Let\'s Get Started</string>
+    <string name="explore_new_places_in_the_world_and_get_new_experiences">Explore new places in the world and get new experiences</string>
+    <string name="signup">Signup</string>
 </resources>

@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.traviling.Adapter.RecentsAdapter;
 import com.example.traviling.Adapter.TopPlacesAdapter;
-import com.example.traviling.R;
+import com.example.traveling.R;
 import com.example.traviling.model.RecentsData;
 import com.example.traviling.model.TopPlacesData;
 

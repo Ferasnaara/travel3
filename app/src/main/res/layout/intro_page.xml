@@ -51,7 +51,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Explore new places in the world and get new experiences"
+                android:text="@string/explore_new_places_in_the_world_and_get_new_experiences"
                 android:textAlignment="center"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -63,7 +63,7 @@
                 android:onClick="gotoLoginFragment"
                 android:layout_width="match_parent"
                 android:layout_height="62dp"
-                android:text="Let's Get Started"
+                android:text="@string/lets_get_started"
                 android:backgroundTint="#FF5722"/>
 
         </LinearLayout>

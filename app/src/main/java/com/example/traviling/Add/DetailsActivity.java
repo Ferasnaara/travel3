@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.traviling.R;
+import com.example.traveling.R;
 public class DetailsActivity extends AppCompatActivity {
 
     @Override
